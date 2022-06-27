@@ -1,2 +1,2 @@
 # Learning-Rust
-This repo is for learing the rust programing language.
+This repo is for learning the rust programing language.
