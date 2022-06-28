@@ -92,12 +92,16 @@ fn block_testing() {
     // Frozen data
     // this variable is mutable now
     let mut mut_data_one = 7;
+    println!("The mutable variable is {}", mut_data_one);
     mut_data_one = 10;
+    println!("The mutable variable is {}", mut_data_one);
     {
         // once it is shadowed the variable becomes frozen and will remain frozen untill the end of the block (when the variable goes out of scope)
-        let mut_data_one = mut_data_one;
+        let _mut_data_one = mut_data_one;
+        println!("The mutable variable is {}", mut_data_one);
     }
     mut_data_one = 15;
+    println!("The mutable variable is {}", mut_data_one);
 
 }
 
