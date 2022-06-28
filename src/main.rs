@@ -63,9 +63,44 @@ fn matching() {
 }
 
 fn block_testing() {
+    // Variables bindings have a scope
+
+    // This variable has a scope of the function
+    let first_var = 5;
+    println!("The first variable is {}", first_var);
+
+    // This is a block
+    {
+        // This variable has a scope of this block
+        // Variables can have the same name as others in the function, this is called shadowing
+        let first_var = 20;
+        println!("The first variable is {}", first_var);
+    }
     
+    // The first variable is still the same
+    println!("The first variable is {}", first_var);
+
+    // Mutable variables can be changed in embedded blocks
+    let mut second_var = 7;
+    println!("The second variable is {}", second_var);
+    {
+        second_var = 20;
+        println!("The second variable is {}", second_var);
+    }
+    println!("The second variable is {}", second_var);
+
+    // Frozen data
+    // this variable is mutable now
+    let mut mut_data_one = 7;
+    mut_data_one = 10;
+    {
+        // once it is shadowed the variable becomes frozen and will remain frozen untill the end of the block (when the variable goes out of scope)
+        let mut_data_one = mut_data_one;
+    }
+    mut_data_one = 15;
+
 }
 
 fn main() {
-    matching();
+    block_testing();
 }
