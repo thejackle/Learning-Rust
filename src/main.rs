@@ -51,6 +51,21 @@ fn printing_things() {
 
 }
 
+fn matching() {
+    let test_number = 15;
+
+    match test_number {
+        1 => println!("One!"),
+        2 | 4 | 6 | 8 | 10 => println!("Even number"),
+        13..=19 => println!("A teen"),
+        _ => println!("a regular number"),
+    }
+}
+
+fn block_testing() {
+    
+}
+
 fn main() {
-    printing_things();
+    matching();
 }
