@@ -34,6 +34,23 @@ fn primatives(){
 
 }
 
+fn printing_things() {
+    // Integer math
+    println!("5 + 7 = {}", 5 + 7);
+    println!("22 - 70 = {}", 22 - 70);
+
+    // Types can be used to define the output
+    println!("5 + 7 = {}", 5i32 + 7);
+    println!("22 - 70 = {}", 22 - 70i32);
+
+    // boolean logic can also be performed
+    println!("true and true = {}", true && true);
+
+    // underscores can be used for improved readability
+    println!("One million dollars, {}$", 1_000_000);
+
+}
+
 fn main() {
-    primatives();
+    printing_things();
 }
